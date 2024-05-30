@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/app.css">
+    <title>Password Manager</title>
+</head>
+<body>
+    <div class="container">
+        <div class="lock-logo">
+            <img src="./images/passwordimage-48.png" alt="icon of a lock">
+        </div>
+        <!--settings container-->
+        <section class="settings-container">
+            <div class="setting">
+                <label for="includeDigits">
+                    <span>Include digits</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="includeDigits" checked>
+            </div>
+            <div class="setting">
+                <label for="Symbols">
+                    <span>Include symbols</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="Symbols" checked>
+            </div>
+            <div class="setting">
+                <label for="UpperCase">
+                    <span>Include Uppercase</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="UpperCase" checked>
+              </div>
+              <div class="setting">
+                <label for="LowerCase">
+                    <span>Include Lowercase</span>
+                    <span></span>
+                </label>
+                <input type="checkbox" id="LowerCase" checked>
+            </div>
+            
+        </section>
+        <!--character container-->
+        <section class="character-length">
+            <p> Your password will be <span id="charLengthSpan">12</span> characters long</p>
+            <p> move the slider to adjust the length of your password</p>
+            <input type="range" id="characterLengthSlider" min="10" max="75" value="15">
+            <label for="characterLengthSlider"></label>
+        </section>
+        <!-- Generated password-->
+        <section class="generated-password">
+            <input type="text" name="Generated Password" id="generatedPassword" spellcheck="false">
+                <label for="generatedPassword"></label>
+            <button  type="button" class="button" id="copyPassword1">Copy</button>
+            <div class="confirmation " id="confirmation">
+                <p>Password Copied!</p>
+            </div>
+
+        </section>
+        <!-- Password Manager Menu -->
+        <section class="password-manager-menu">
+            <h2>Password Manager Menu</h2>
+            <form>
+                <label for="website">Website:</label>
+                <input type="text" id="website" required>
+
+                <label for="storedPassword">Password:</label>
+                <input type="text" id="storedPassword" required>
+
+                <button type="submit" class="button" id="savePassword">Save Password</button>
+                <button type="button" class="button" id="retrievePassword">Retrieve Password</button>
+
+                <button type="button" class="edit-button button">Edit Password</button>
+                <button type="button" class="delete-button button">Delete Password</button>
+            </form>
+        </section>
+    </div>
+    <script src="./scripts/app.js"></script>
+</body>
+</html>
